@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.unitec.weba;
 
 public class ModeloAutenticar {
@@ -12,7 +8,7 @@ public class ModeloAutenticar {
         
         //Autenticamos sin base de datos
         
-        if(u.getLogin().equals("Amil") && u.getPassword().equals("moco123")){
+        if(u.getLogin().equals("Borguer") && u.getPassword().equals("gatucho")){
             autenticado = true;
         }
         return autenticado;

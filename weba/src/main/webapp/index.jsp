@@ -10,9 +10,11 @@
     <body>
         <h1>Ingresa tus datos</h1>
         <br>
+        <form action="Autenticar" method="post">
         Login<br>
-        <input type="text" name="login"<input/>
+        <input type="text" name="login"<input/><br>
         Password<br>
-        <input type="password" name="password"<input/>
+        <input type="password" name="password"<input/><br>
+        <input type="submit" value="ingresar"<input/>
     </body>
 </html>
