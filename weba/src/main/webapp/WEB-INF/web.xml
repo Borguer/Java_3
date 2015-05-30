@@ -2,12 +2,12 @@
 <web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
     <display-name>weba</display-name>
     <servlet>
-        <servlet-name>servilleta</servlet-name>
+        <servlet-name>Servilleta</servlet-name>
         <servlet-class>com.unitec.weba.ServletAutenticar</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>servilleta</servlet-name>
-        <url-pattern>/Autenticar</url-pattern>
+        <servlet-name>Servilleta</servlet-name>
+        <url-pattern>/autenticar</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
