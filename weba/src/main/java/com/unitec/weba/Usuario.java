@@ -1,43 +1,52 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.unitec.weba;
 
-public class Usuario {
-    private Integer id;
+import java.io.Serializable;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "usuario")
+public class Usuario implements Serializable {
+    private static final long serialVersionUID = 1L;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Basic(optional = false)
+    
+    @Column(name = "ID_Usuario")
+    private Integer iDUsuario;
+    
+    @Column(name = "nombre")
     private String nombre;
+    
+    @Column(name = "email")
     private String email;
+    
+    @Column(name = "login")
     private String login;
+    
+    @Column(name = "password")
     private String password;
-
-    public Usuario(Integer id, String nombre, String email, String login, String password) {
-        this.id = id;
-        this.nombre = nombre;
-        this.email = email;
-        this.login = login;
-        this.password = password;
-    }
-
-    @Override
-    public String toString() {
-        return "Usuario{" + "id=" + id + ", nombre=" + nombre + ", email=" + email + ", login=" + login + ", password=" + password + '}';
-    }
-
-    public Usuario(Integer id) {
-        this.id = id;
-    }
 
     public Usuario() {
     }
 
-    public Integer getId() {
-        return id;
+    public Usuario(Integer iDUsuario) {
+        this.iDUsuario = iDUsuario;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public Integer getIDUsuario() {
+        return iDUsuario;
+    }
+
+    public void setIDUsuario(Integer iDUsuario) {
+        this.iDUsuario = iDUsuario;
     }
 
     public String getNombre() {
@@ -71,4 +80,30 @@ public class Usuario {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 0;
+        hash += (iDUsuario != null ? iDUsuario.hashCode() : 0);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        // TODO: Warning - this method won't work in the case the id fields are not set
+        if (!(object instanceof Usuario)) {
+            return false;
+        }
+        Usuario other = (Usuario) object;
+        if ((this.iDUsuario == null && other.iDUsuario != null) || (this.iDUsuario != null && !this.iDUsuario.equals(other.iDUsuario))) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "com.unitec.weba.Usuario[ iDUsuario=" + iDUsuario + " ]";
+    }
+    
 }
