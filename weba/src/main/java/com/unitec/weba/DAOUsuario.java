@@ -10,7 +10,7 @@ public class DAOUsuario {
     static SessionFactory factory;
     static Session session;
     static Transaction tranza;
-    static{
+    public static void abrirTodo(){
         factory= HibernateUtilidades.getSessionFactory();
         session= factory.openSession();
         tranza=session.beginTransaction();
@@ -26,6 +26,7 @@ public class DAOUsuario {
     
     //Creamos el insert
     public void guardar(Usuario u) throws Exception{
+        abrirTodo();
         session.save(u);
         cerrarTodo();
     }
