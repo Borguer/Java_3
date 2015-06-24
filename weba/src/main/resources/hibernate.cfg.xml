@@ -8,5 +8,6 @@
     <property name="hibernate.connection.username">app</property>
     <property name="hibernate.connection.password">app</property>
     <mapping class="com.unitec.weba.Usuario"></mapping>
+    <mapping class="com.weba.Administracion"></mapping>
   </session-factory>
 </hibernate-configuration>

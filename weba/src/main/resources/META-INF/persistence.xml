@@ -3,6 +3,8 @@
   <persistence-unit name="com.unitec_weba_war_1.0PU" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>com.unitec.weba.Usuario</class>
+    <class>com.unitec.weba.Administracion</class>
+    <class>com.unitec.weba.Usuario_1</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/mysql?zeroDateTimeBehavior=convertToNull"/>
